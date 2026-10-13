@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ronny-jacob.github.io/sitemap.xml

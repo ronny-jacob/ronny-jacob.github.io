@@ -1,0 +1,47 @@
+<!--title: Invisalign Tracker case study | Ronny Jacob-->
+<!--desc: A local-first web app that turns a daily aligner-wear target into one number to enter and a clear answer, built on a tested rules engine.-->
+<!--image: assets/img/invisalign-today.webp-->
+<header class="cs-head wrap">
+  <p class="crumb"><a href="{{root}}index.html#work">All work</a></p>
+  <h1>Invisalign Tracker</h1>
+  <p class="sub">Built independently. Sole product owner and builder.</p>
+  <dl class="brief">
+    <dt>Problem</dt><dd>A daily wear target is easy to miss when every tray removal means mental arithmetic.</dd>
+    <dt>I built</dt><dd>A local-first app. Log minutes out; it shows today’s status, what happens if you stop now, and the longest next removal that keeps the day on track.</dd>
+    <dt>Evidence</dt><dd class="result">75 of 75 rule tests pass, including every worked example in my spec. Data stays on the device.</dd>
+    <dt>Next</dt><dd>Configurable rules, an optional reminder, and testing with other aligner wearers.</dd>
+  </dl>
+  <p class="note">A tracking tool with rules I defined, not medical advice. Screenshots use sample data.</p>
+</header>
+<div class="cs-body wrap">
+<figure class="zones">
+  <div class="zbar" role="img" aria-label="Removal length zones: 0 to 30 minutes on target, 31 to 35 small overrun, 36 to 40 amber, 41 to 60 red, over 60 extended">
+    <span class="z z1" style="--w:30"></span><span class="z z2" style="--w:5"></span><span class="z z3" style="--w:5"></span><span class="z z4" style="--w:20"></span><span class="z z5" style="--w:10"></span>
+  </div>
+  <div class="zlab" aria-hidden="true">
+    <span style="--w:30"><b>0–30</b>On target</span><span style="--w:5"><b>31–35</b></span><span style="--w:5"><b>36–40</b></span><span style="--w:20"><b>41–60</b>Red</span><span style="--w:10"><b>60+</b></span>
+  </div>
+  <ul class="zkey"><li><b>31–35 min:</b> small overrun</li><li><b>36–40:</b> amber, Near Perfect at best</li><li><b>41–60:</b> red, fails the day (one-off softened)</li><li><b>Over 60:</b> fails</li></ul>
+  <figcaption>How each tray removal is classified, in minutes. My own rules, not medical advice.</figcaption>
+</figure>
+
+<figure class="livefig"><div class="live phone" style="--poster:url({{root}}assets/img/invisalign-today.webp)"><iframe src="https://ronny-jacob.github.io/invisalign-tracker/" title="Invisalign Tracker, live and interactive" loading="lazy"></iframe><button class="try" type="button" aria-label="Enable the live Invisalign Tracker preview">Try it live</button></div><figcaption>Live app. Anything you enter stays in your browser.</figcaption></figure>
+
+<h2>Decisions</h2>
+<ul>
+  <li><strong>The app does the thinking.</strong> You type minutes; it recalculates the day.</li>
+  <li><strong>Deterministic rules, no AI.</strong> The same input always gives the same answer, so the rules can be tested.</li>
+  <li><strong>Raw events are the source of truth.</strong> Editing an old removal corrects that day, the streaks and the insights.</li>
+  <li><strong>Local-first.</strong> Data stays in the browser, with JSON and CSV export.</li>
+  <li><strong>I changed my own spec once</strong> (v1.6.0): a single 41–60 minute removal no longer fails a day if it is the only one in seven days.</li>
+</ul>
+
+<h2>Limits</h2>
+<ul>
+  <li>No cross-device sync; switching phones needs an export and import.</li>
+  <li>The rules suit my plan. Other plans would need configurable rules.</li>
+  <li>No user research and no usage data.</li>
+</ul>
+<p class="cta-row"><a class="btn btn-primary" href="https://ronny-jacob.github.io/invisalign-tracker/">Open the live app</a></p>
+<div class="next-prev"><a href="{{root}}case-studies/nmims-class-companion.html">Previous: NMIMS Class Companion</a><a href="{{root}}index.html#work">All work</a></div>
+</div>

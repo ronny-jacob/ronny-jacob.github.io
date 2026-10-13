@@ -1,0 +1,73 @@
+<!--title: TradeIndia case study | Ronny Jacob-->
+<!--desc: How I took buyer-keyword matching at a B2B marketplace from 43% to 86% accuracy with a small language model, a validation pipeline and automated prompt testing.-->
+<header class="cs-head wrap">
+  <p class="crumb"><a href="{{root}}index.html#work">All work</a></p>
+  <h1>TradeIndia: AI keyword matching</h1>
+  <p class="sub">Product intern, April–June 2026.</p>
+  <dl class="brief">
+    <dt>Problem</dt><dd>Buyers type long product names. Sellers list short ones. Matching used the full name, so qualified sellers were missed.</dd>
+    <dt>I owned</dt><dd>Model comparison, 14 prompt experiments, a validation pipeline and automated testing.</dd>
+    <dt>Result</dt><dd class="result">43% → 86% accuracy on a 10,000-product test set. Deployed during the internship.</dd>
+    <dt>Next</dt><dd>Test Gemini 2.5 Flash Lite in production once budget allows.</dd>
+  </dl>
+</header>
+
+<div class="cs-body wrap">
+<div class="top-chart">{{include:chart}}
+<p class="legend"><span class="tag tag-m">Measured</span> a test I ran. <span class="tag tag-o">Observed</span> something I saw without a metric. I did not measure production accuracy or business impact. Prompts and some details are withheld under a confidentiality agreement.</p></div>
+
+<div class="lanes" role="group" aria-label="Who did what">
+  <div class="lane"><h3>Tech team</h3><p>SpaCy model (43%) and the first Gemma 2 prompt (76%)</p></div>
+  <div class="lane mine"><h3>Me</h3><p>New prompt (86%), validation pipeline (88%) and automated testing</p></div>
+  <div class="lane"><h3>Engineering</h3><p>Deployed it to production</p></div>
+</div>
+
+<h2>The problem</h2>
+<figure class="demo" id="demo">
+  <p class="sr">A buyer types “High Quality Stainless Steel Water Bottle 1000ml BPA Free”. Sellers list “Steel Bottle”.</p>
+  <p class="tokens" aria-hidden="true"><span class="tok drop" style="--i:0">High</span><span class="tok drop" style="--i:1">Quality</span><span class="tok drop" style="--i:2">Stainless</span><span class="tok keep">Steel</span><span class="tok drop" style="--i:3">Water</span><span class="tok keep">Bottle</span><span class="tok drop" style="--i:4">1000ml</span><span class="tok drop" style="--i:5">BPA</span><span class="tok drop" style="--i:6">Free</span></p>
+  <p class="out" aria-hidden="true">Steel Bottle</p>
+  <figcaption>Illustrative example. Specifications and marketing words never match a seller’s keywords.</figcaption>
+</figure>
+<p>The system used the full product name as the search keyword, across tens of thousands of inquiries a day. I traced the journey from inquiry to seller notification and found the keyword step was the bottleneck. The first release also had to cost nothing to run and work with a 2-billion-parameter model.</p>
+
+<h2>What I did</h2>
+<ul>
+  <li><strong>Ruled out SpaCy:</strong> 43% on the 10,000-product test set. <span class="tag tag-m">Measured</span></li>
+  <li><strong>Compared six models:</strong> GPT-4o, Claude 3.5 Sonnet, Mistral Large, DeepSeek V3, Gemini 2.5 Flash Lite and Gemma 2.</li>
+  <li><strong>Tested 14 prompt variants</strong> with fixed settings. Clear steps beat example-heavy prompts, and extra rules caused errors, so I moved edge cases into code. Best prompt: 86%. <span class="tag tag-m">Measured</span></li>
+  <li><strong>Added a validation pipeline:</strong> Gemma 2 went from 76% (original prompt) to 88%. <span class="tag tag-m">Measured</span></li>
+  <li><strong>Automated testing:</strong> a cycle went from 1–2 hours on 20–50 keywords to 5–10 minutes on 500–1,000+. <span class="tag tag-m">Measured</span></li>
+</ul>
+
+<figure class="decision">
+  <div class="dgrid">
+    <div class="dbox"><h3>Most accurate for the price</h3><p>Gemini 2.5 Flash Lite: 97% in separate API tests, about $0.10 per million input tokens.</p></div>
+    <div class="dbox"><h3>Requirement</h3><p>A zero-cost first release.</p></div>
+    <div class="dbox win"><h3>Decision</h3><p>Gemma 2, running locally. Gemini kept as the upgrade path.</p></div>
+  </div>
+  <figcaption>Why Gemini was not deployed.</figcaption>
+</figure>
+
+<figure class="decision">
+  <ol class="steps">
+    <li><h3>Check the input</h3><p>One- or two-word names skip the model.</p></li>
+    <li><h3>Check the output</h3><p>A one-word answer is retried, up to five times.</p></li>
+    <li><h3>Fall back</h3><p>If every retry fails, use the original name.</p></li>
+  </ol>
+  <figcaption>The validation pipeline around the model.</figcaption>
+</figure>
+
+<h2>Limits and next steps</h2>
+<ul>
+  <li>These are offline test results. The original prompt scored higher in my controlled tests than in the team’s earlier production testing, so I expect production to land lower.</li>
+  <li>A 2B model has a ceiling. Retries and fallbacks stop bad output but cannot fix a plausible wrong keyword.</li>
+  <li>Shorter keywords match more sellers and can match the wrong ones. I handled this with the pipeline, not a measured precision metric.</li>
+  <li>Next: run Gemini 2.5 Flash Lite on the same test set in production, find the test-to-live gap, and measure sellers reached per inquiry.</li>
+</ul>
+
+<div class="next-prev">
+  <a href="{{root}}index.html#work">All work</a>
+  <a href="{{root}}case-studies/nmims-class-companion.html">Next: NMIMS Class Companion</a>
+</div>
+</div>

@@ -1,0 +1,30 @@
+<!--title: Lean 12 case study | Ronny Jacob-->
+<!--desc: A personal workout log that suggests the next session and tracks sets, effort and joint pain for a 12-week plan.-->
+<!--image: assets/img/lean-train.webp-->
+<header class="cs-head wrap">
+  <p class="crumb"><a href="{{root}}index.html#work">All work</a></p>
+  <h1>Lean 12</h1>
+  <p class="sub">A personal tool I built for myself, now live.</p>
+  <dl class="brief">
+    <dt>Problem</dt><dd>A 12-week plan only works if I remember which session is next, what I lifted last time and how my joints felt.</dd>
+    <dt>I built</dt><dd>A workout log that suggests the next session, records sets, reps in reserve and joint pain, and runs the rest timer.</dd>
+    <dt>Evidence</dt><dd class="result">None to report. One user, no outcome measure.</dd>
+    <dt>Next</dt><dd>Separate personal settings from code so it can be shared, and add backup.</dd>
+  </dl>
+</header>
+<div class="cs-body wrap">
+<figure class="livefig"><div class="live phone" style="--poster:url({{root}}assets/img/lean-train.webp)"><iframe src="https://ronny-jacob.github.io/lean12/" title="Lean 12, live and interactive" loading="lazy"></iframe><button class="try" type="button" aria-label="Enable the live Lean 12 preview">Try it live</button></div><figcaption>Live app. Anything you log stays in your browser.</figcaption></figure>
+<h2>Decisions</h2>
+<ul>
+  <li><strong>A rotation that forgives missed days.</strong> Sessions A, B, C run Monday, Wednesday, Friday, and the app suggests the next one.</li>
+  <li><strong>Effort and pain after every exercise,</strong> so the next suggestion and any swap are grounded in how it went.</li>
+  <li><strong>A rule-based next step:</strong> a heavier load once every set reaches the top of the rep range.</li>
+</ul>
+<h2>Limits</h2>
+<ul>
+  <li>Data lives on one device. The rules are simple, personal and not clinically validated.</li>
+  <li>Exercise data is credited in the app to RepDB (repdb.co). Anyone who opens it keeps their own logs in their own browser.</li>
+</ul>
+<p class="cta-row"><a class="btn btn-primary" href="https://ronny-jacob.github.io/lean12/">Open the live app</a></p>
+<div class="next-prev"><a href="{{root}}case-studies/invisalign-tracker.html">Previous: Invisalign Tracker</a><a href="{{root}}index.html#work">All work</a></div>
+</div>
