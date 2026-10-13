@@ -28,7 +28,7 @@ def build():
         body = re.sub(r"<!--\s*(title|desc|image):.*?-->\s*", "", src, flags=re.S)
         body = re.sub(r"\{\{include:(\w+)\}\}", lambda m: (ROOT / "pages" / ("_%s.html" % m.group(1))).read_text(encoding="utf-8"), body)
         body = body.replace("{{root}}", root)
-        nav = '<a href="%scase-studies/tradeindia.html">Case study</a><a class="btn btn-primary btn-sm" href="mailto:ronnyjacobmba@gmail.com">Email me</a>' % root
+        nav = '<a href="%scase-studies/tradeindia.html">TradeIndia case study</a><a class="btn btn-primary btn-sm" href="mailto:ronnyjacobmba@gmail.com">Email me</a>' % root
         canon = BASE + ("" if out == "index.html" else out)
         og_img = BASE + (image or "assets/img/ronny-portrait.jpg")
         noindex = '<meta name="robots" content="noindex">' if out == "404.html" else ""
@@ -47,7 +47,9 @@ def build():
 <meta property="og:url" content="{canon}">
 <meta property="og:image" content="{og_img}">
 <meta name="twitter:card" content="summary">
+<meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#16505f">
+<meta property="og:site_name" content="Ronny Jacob">
 <link rel="icon" type="image/svg+xml" href="{root}assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

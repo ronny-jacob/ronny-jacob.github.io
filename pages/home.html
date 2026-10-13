@@ -1,14 +1,15 @@
 <!--title: Ronny Jacob | Associate Product Manager, AI products-->
 <!--desc: I took a B2B marketplace's keyword matching from 43% to 86% accuracy on a 10,000-product test set, and it shipped. MBA candidate at NMIMS Hyderabad.-->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Ronny Jacob","url":"https://ronny-jacob.github.io/","email":"mailto:ronnyjacobmba@gmail.com","sameAs":["https://www.linkedin.com/in/ronny-jacob/","https://github.com/ronny-jacob"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"NMIMS School of Business Management, Hyderabad"},{"@type":"CollegeOrUniversity","name":"University of Kerala"}]}
+{"@context":"https://schema.org","@type":"Person","@id":"https://ronny-jacob.github.io/#person","name":"Ronny Jacob","url":"https://ronny-jacob.github.io/","image":"https://ronny-jacob.github.io/assets/img/ronny-portrait.jpg","email":"ronnyjacobmba@gmail.com","description":"MBA candidate at NMIMS Hyderabad and product intern at TradeIndia, looking for associate product manager and AI product roles.","sameAs":["https://www.linkedin.com/in/ronny-jacob/","https://github.com/ronny-jacob"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"NMIMS School of Business Management, Hyderabad"},{"@type":"CollegeOrUniversity","name":"University of Kerala"}]}
 </script>
 
 <section class="hero wrap">
+  <div class="aurora" aria-hidden="true"><i></i><i></i></div>
   <div class="hero-grid">
     <div class="hero-copy">
       <p class="eyebrow">Associate product manager · AI products</p>
-      <h1>I took a B2B marketplace’s keyword matching from <mark>43% to 86%</mark> accuracy, and it shipped.</h1>
+      <h1>I took a B2B marketplace’s keyword matching from <span class="hl">43% to 86%</span> accuracy, and it shipped.</h1>
       <p class="who"><strong>I’m Ronny.</strong> A former advocate, now an MBA candidate at NMIMS Hyderabad and a product intern at TradeIndia. Open to associate product manager and AI product roles.</p>
       <p class="cta-row">
         <a class="btn btn-primary" href="{{root}}case-studies/tradeindia.html"><span>See how I did it</span><i class="arr" aria-hidden="true">→</i></a>
@@ -16,47 +17,49 @@
       </p>
     </div>
     <figure class="hero-photo">
-      <img src="{{root}}assets/img/ronny-portrait.jpg" width="1000" height="1333" alt="Portrait of Ronny Jacob, smiling, with glasses and a beard">
+      <img src="{{root}}assets/img/ronny-portrait.jpg" width="1000" height="1333" fetchpriority="high" alt="Portrait of Ronny Jacob, smiling, with glasses and a beard">
+      <div class="proof-chip" role="note"><span class="sr">Accuracy rose from 43% to 86%.</span><span class="pc-num" aria-hidden="true"><span class="pc-from">43%</span><i>→</i><span class="pc-to">86%</span></span><span class="pc-cap">Keyword-matching accuracy, offline test</span></div>
       <figcaption><b>Ronny Jacob</b><span>Product intern, TradeIndia</span></figcaption>
     </figure>
   </div>
 </section>
 
-<section class="wrap" id="work" aria-label="Selected work">
-  <a class="pcard big" href="{{root}}case-studies/tradeindia.html">
-    <span class="bigtext">
+<section class="wrap" id="work">
+  <h2 class="sr">Selected work</h2>
+  <div class="pcard big">
+    <div class="bigtext">
       <span class="kind">Internship, April-June 2026</span>
-      <span class="name">TradeIndia: AI keyword matching</span>
+      <h3 class="name"><a class="stretch" href="{{root}}case-studies/tradeindia.html">TradeIndia: AI keyword matching</a></h3>
       <span class="what">Buyers type long product names; sellers list short ones. I owned the model comparison, 14 prompt experiments, the validation pipeline and the automated testing.</span>
       <span class="metric">In production<small>deployed during the internship</small></span>
-    </span>
-    <span class="bigvis">{{include:chart_hero}}</span>
-  </a>
+    </div>
+    <div class="bigvis">{{include:chart_hero}}</div>
+  </div>
 
   <ul class="trio small">
     <li class="pcard">
-      <div class="live " style="--poster:url({{root}}assets/img/nmims-timetable.webp)"><iframe src="https://ronny-jacob.github.io/nmims-class-schedule/" title="NMIMS Class Companion, live and interactive" loading="lazy"></iframe><button class="try" type="button" aria-label="Enable the live NMIMS Class Companion preview">Try it live</button></div>
+      <div class="live " style="--poster:url(../img/nmims-timetable.webp)"><iframe src="https://ronny-jacob.github.io/nmims-class-schedule/" title="NMIMS Class Companion, live and interactive" loading="lazy"></iframe><button class="try" type="button" aria-label="Try it live: NMIMS Class Companion preview">Try it live</button></div>
       <span class="kind">Built independently, live</span>
-      <a class="name" href="{{root}}case-studies/nmims-class-companion.html">NMIMS Class Companion</a>
+      <h3 class="name-h"><a class="name" href="{{root}}case-studies/nmims-class-companion.html">NMIMS Class Companion</a></h3>
       <span class="what">One app for my batch’s timetable, menu and shared free time.</span>
       <span class="metric">56 students<small>in the first 99 sign-ins</small></span>
-      <span class="links-inline"><a href="{{root}}case-studies/nmims-class-companion.html">Case study</a><a href="https://ronny-jacob.github.io/nmims-class-schedule/">Open full app</a></span>
+      <span class="links-inline"><a href="{{root}}case-studies/nmims-class-companion.html" aria-label="Case study: NMIMS Class Companion">Case study</a><a href="https://ronny-jacob.github.io/nmims-class-schedule/" aria-label="Open full app: NMIMS Class Companion">Open full app</a></span>
     </li>
     <li class="pcard">
-      <div class="live " style="--poster:url({{root}}assets/img/invisalign-today.webp)"><iframe src="https://ronny-jacob.github.io/invisalign-tracker/" title="Invisalign Tracker, live and interactive" loading="lazy"></iframe><button class="try" type="button" aria-label="Enable the live Invisalign Tracker preview">Try it live</button></div>
+      <div class="live " style="--poster:url(../img/invisalign-today.webp)"><iframe src="https://ronny-jacob.github.io/invisalign-tracker/" title="Invisalign Tracker, live and interactive" loading="lazy"></iframe><button class="try" type="button" aria-label="Try it live: Invisalign Tracker preview">Try it live</button></div>
       <span class="kind">Built independently, live</span>
-      <a class="name" href="{{root}}case-studies/invisalign-tracker.html">Invisalign Tracker</a>
+      <h3 class="name-h"><a class="name" href="{{root}}case-studies/invisalign-tracker.html">Invisalign Tracker</a></h3>
       <span class="what">A private aligner-wear tracker with a tested rules engine.</span>
       <span class="metric">75 of 75<small>rule tests pass</small></span>
-      <span class="links-inline"><a href="{{root}}case-studies/invisalign-tracker.html">Case study</a><a href="https://ronny-jacob.github.io/invisalign-tracker/">Open full app</a></span>
+      <span class="links-inline"><a href="{{root}}case-studies/invisalign-tracker.html" aria-label="Case study: Invisalign Tracker">Case study</a><a href="https://ronny-jacob.github.io/invisalign-tracker/" aria-label="Open full app: Invisalign Tracker">Open full app</a></span>
     </li>
     <li class="pcard">
-      <div class="live " style="--poster:url({{root}}assets/img/lean-train.webp)"><iframe src="https://ronny-jacob.github.io/lean12/" title="Lean 12, live and interactive" loading="lazy"></iframe><button class="try" type="button" aria-label="Enable the live Lean 12 preview">Try it live</button></div>
+      <div class="live " style="--poster:url(../img/lean-train.webp)"><iframe src="https://ronny-jacob.github.io/lean12/" title="Lean 12, live and interactive" loading="lazy"></iframe><button class="try" type="button" aria-label="Try it live: Lean 12 preview">Try it live</button></div>
       <span class="kind">Built for myself, live</span>
-      <a class="name" href="{{root}}case-studies/lean-12.html">Lean 12</a>
+      <h3 class="name-h"><a class="name" href="{{root}}case-studies/lean-12.html">Lean 12</a></h3>
       <span class="what">A workout log that suggests the next session and tracks effort and joint pain.</span>
       <span class="metric">Personal tool<small>one user, no outcome claims</small></span>
-      <span class="links-inline"><a href="{{root}}case-studies/lean-12.html">Case study</a><a href="https://ronny-jacob.github.io/lean12/">Open full app</a></span>
+      <span class="links-inline"><a href="{{root}}case-studies/lean-12.html" aria-label="Case study: Lean 12">Case study</a><a href="https://ronny-jacob.github.io/lean12/" aria-label="Open full app: Lean 12">Open full app</a></span>
     </li>
   </ul>
 </section>
