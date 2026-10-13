@@ -47,3 +47,8 @@ The uploaded file has these defaults built in: start weight 75 kg, height 168 cm
 | 23 | Reads the bills tried correctly | Owner message said "always"; the site says only "the bills I have tried", tagged Observed | Not measured. Do not strengthen without a test set |
 | 24 | A few people use it, hosted on Netlify | Owner message ("some people use it") | No count. Do not add a number without a source |
 | 25 | Features: scan or upload, manual entry, tap names to assign, shared items split equally, copy result | Page at ronsplitsbills.netlify.app, viewed 13 Oct 2026 | Verified on the page. Payer handling (one person paying all, or parts) was not seen, so it is not claimed |
+
+## Class Companion opens (owner clarification, 13 Oct 2026)
+| # | Claim on the site | Source | Status |
+| --- | --- | --- | --- |
+| 26 | 16,795 app opens in 72 days (3 Aug to 13 Oct), about 233 a day; 1,943 in the 7 days to 13 Oct | `pageview` events in the analytics sheet. Owner: a blank-identity open is someone arriving on the Food Menu, the landing page | Verified from the sheet. May include the owner's own visits (not separable). Opens are not people: many people use the Food Menu without picking their name, so the 147 students is a floor for personalised users, not total reach |
