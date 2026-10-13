@@ -405,3 +405,6 @@ html { scroll-padding-top:6rem; }
 .hero .btn-primary:hover { transform:translate(var(--tx,0px),var(--ty,0px)); }
 .hero .btn-primary:active { transform:translate(var(--tx,0px),var(--ty,0px)) scale(.98); }
 @media (max-width:820px) { .proof-chip .pc-cap { display:block; font-size:.66rem; max-width:7.5rem; } .proof-chip { right:-2.2rem; } }
+
+/* Four project cards: 2x2 on desktop */
+@media (min-width:821px) { .trio.small { grid-template-columns:repeat(2,1fr); } .trio.small .live { height:300px; } }

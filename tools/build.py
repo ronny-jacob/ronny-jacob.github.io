@@ -11,6 +11,7 @@ PAGES = {  # fragment -> output path
     "nmims-class-companion.html": "case-studies/nmims-class-companion.html",
     "invisalign-tracker.html": "case-studies/invisalign-tracker.html",
     "lean-12.html": "case-studies/lean-12.html",
+    "splitbill.html": "case-studies/splitbill.html",
     "404.html": "404.html",
 }
 NAV = [("Work", "#work", "work"), ("Skills", "#skills", "skills"), ("About", "#about", "about"), ("Contact", "#contact", "contact")]

@@ -38,3 +38,12 @@ The uploaded file has these defaults built in: start weight 75 kg, height 168 cm
 - Home hero now says "A former advocate, now an MBA candidate (2027) at NMIMS Hyderabad and a product intern at TradeIndia". This restates claim 19 and the TradeIndia internship (claim 7 context); no new fact.
 - Section headings were reworded ("How I work", a contact heading). No claims changed.
 - The résumé button is intentionally absent until a PDF is provided.
+
+## SplitBill (added by owner statement, 13 Oct 2026)
+| # | Claim on the site | Source | Status |
+| --- | --- | --- | --- |
+| 21 | Built for the owner's group food orders; people eat different items and who pays varies | Owner message | Owner statement |
+| 22 | Scan uses an image model on Google Cloud because OCR methods did not work | Owner message | Owner statement; model not named on the site |
+| 23 | Reads the bills tried correctly | Owner message said "always"; the site says only "the bills I have tried", tagged Observed | Not measured. Do not strengthen without a test set |
+| 24 | A few people use it, hosted on Netlify | Owner message ("some people use it") | No count. Do not add a number without a source |
+| 25 | Features: scan or upload, manual entry, tap names to assign, shared items split equally, copy result | Page at ronsplitsbills.netlify.app, viewed 13 Oct 2026 | Verified on the page. Payer handling (one person paying all, or parts) was not seen, so it is not claimed |
