@@ -25,7 +25,7 @@
 /* 3) Scroll reveal: fade-up as sections enter the viewport. Respects reduced motion; content stays visible without JS. */
 (function () {
   if (!('IntersectionObserver' in window) || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
-  var items = document.querySelectorAll('.hero-copy > *, .hero-photo, .pcard, .why > div, .path-strip li, .contact > *, .brief, .lane, .dbox, .steps li');
+  var items = document.querySelectorAll('.pcard, .why > div, .path-strip li, .contact > *, .brief, .lane, .dbox, .steps li');
   if (!items.length) return;
   document.documentElement.classList.add('js-reveal');
   var io = new IntersectionObserver(function (entries) {
