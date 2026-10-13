@@ -7,14 +7,14 @@
   <dl class="brief">
     <dt>Problem</dt><dd>Buyers type long product names. Sellers list short ones. Matching used the full name, so qualified sellers were missed.</dd>
     <dt>I owned</dt><dd>Model comparison, 14 prompt experiments, a validation pipeline and automated testing.</dd>
-    <dt>Result</dt><dd class="result">43% → 86% accuracy on a 10,000-product test set. Deployed during the internship.</dd>
+    <dt>Result</dt><dd class="result">43% → 86% accuracy on a 10,000-product offline test. Deployed during the internship, where a long-tail buyer request now reaches 6x more correct sellers, from the company dashboard.</dd>
     <dt>Next</dt><dd>Test Gemini 2.5 Flash Lite in production once budget allows.</dd>
   </dl>
 </header>
 
 <div class="cs-body wrap">
 <div class="top-chart">{{include:chart}}
-<p class="legend"><span class="tag tag-m">Measured</span> a test I ran. <span class="tag tag-o">Observed</span> something I saw without a metric. I did not measure production accuracy or business impact. Prompts and some details are withheld under a confidentiality agreement.</p></div>
+<p class="legend"><span class="tag tag-m">Measured</span> a test I ran. <span class="tag tag-o">Observed</span> something I saw without a metric. The 6x figure for long-tail buyer requests comes from the company dashboard, not a test I ran. I did not measure production accuracy or business impact myself. Prompts and some details are withheld under a confidentiality agreement.</p></div>
 
 <div class="lanes" role="group" aria-label="Who did what">
   <div class="lane"><h3>Tech team</h3><p>SpaCy model (43%) and the first Gemma 2 prompt (76%)</p></div>
