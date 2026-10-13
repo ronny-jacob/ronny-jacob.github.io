@@ -7,7 +7,7 @@ from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES = ["index.html", "404.html", "case-studies/tradeindia.html", "case-studies/nmims-class-companion.html",
-         "case-studies/invisalign-tracker.html", "case-studies/lean-12.html"]
+         "case-studies/invisalign-tracker.html", "case-studies/lean-12.html", "case-studies/splitbill.html"]
 # Terms that must never appear on the public site (confidential, personal or unsupported). Case-insensitive.
 FORBIDDEN = ["SAP ID", "80012500885", "Smarth", "Mohan", "Sajjad", "Akash", "Divyansh", "Afzal", "Ajay K",
              "Painless", "DialB2B", "Infocom", "Shadman", "P07", "P08", "Annexure",

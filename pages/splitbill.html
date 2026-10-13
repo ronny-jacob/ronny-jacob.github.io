@@ -1,0 +1,29 @@
+<!--title: SplitBill case study | Ronny Jacob-->
+<!--desc: A web app that splits a group food bill by who ate what, with a bill scan built on an image model after OCR did not work.-->
+<header class="cs-head wrap">
+  <p class="crumb"><a href="{{root}}index.html#work">All work</a></p>
+  <h1>SplitBill</h1>
+  <p class="sub">A bill splitter I built for the food my friends and I order, now live.</p>
+  <dl class="brief">
+    <dt>Problem</dt><dd>When a group orders food, people eat different items. Who pays, and how much, changes every time.</dd>
+    <dt>I built</dt><dd>A web app where you scan or upload a photo of the bill, or type the items in, tap who ate each item and see what each person owes.</dd>
+    <dt>Evidence</dt><dd class="result">Reads the bills I have tried correctly. A few people use it. <span class="tag tag-o">Observed</span> No accuracy or usage numbers yet.</dd>
+    <dt>Next</dt><dd>Measure the scan on a set of real bills before claiming more.</dd>
+  </dl>
+</header>
+<div class="cs-body wrap">
+<figure class="livefig"><div class="live phone" style="--poster:none"><iframe src="https://ronsplitsbills.netlify.app/" title="SplitBill, live and interactive" loading="lazy"></iframe><button class="try" type="button" aria-label="Try it live: SplitBill preview">Try it live</button></div><figcaption>Live app. Try the manual entry if you do not have a bill to hand.</figcaption></figure>
+<h2>Decisions</h2>
+<ul>
+  <li><strong>An image model instead of OCR.</strong> Plain OCR methods did not work on these bills, so the scan uses an image model on Google Cloud.</li>
+  <li><strong>Tap names to assign items.</strong> Tapping several names on one item shares it between them.</li>
+  <li><strong>Manual entry as a fallback,</strong> so a bad photo does not block the split.</li>
+</ul>
+<h2>Limits</h2>
+<ul>
+  <li>Scan accuracy is my own observation, not a measured rate.</li>
+  <li>I have no usage numbers, only that a few people use it.</li>
+</ul>
+<p class="cta-row"><a class="btn btn-primary" href="https://ronsplitsbills.netlify.app/"><span>Open the live app</span><i class="arr" aria-hidden="true">→</i></a></p>
+<div class="next-prev"><a href="{{root}}case-studies/nmims-class-companion.html">Previous: NMIMS Class Companion</a><a href="{{root}}case-studies/invisalign-tracker.html">Next: Invisalign Tracker</a></div>
+</div>

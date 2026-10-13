@@ -3,7 +3,7 @@
 ## Blocked on the owner (do not guess; ask)
 1. Confirm the 43% → 86% claim: that 43% is the SpaCy approach, that it was measured on 10,000 products, and how "correct" was judged. (The source report says 100 products in most places.)
 2. Confirm the chain 76% → 88% for Gemma 2 and that 86% is the prompt alone while 88% adds the validation pipeline.
-3. Full NMIMS sign-in count (the site says 56 students in the first 99 log entries).
+3. ~~Full NMIMS sign-in count~~ Resolved 13 Oct 2026: 147 students, see CLAIMS.md #12.
 4. Whether the email ronnyjacobmba@gmail.com is public.
 5. Lean 12 live copy: it may expose default body targets (75 kg, 168 cm, 68 kg, 2,000 kcal, 140 g, 9,000 steps). Offer a neutral-defaults copy for the `lean12` repository.
 6. CV claims not in the report and therefore not on the site: 2x seller matching, 5x seller discovery, "~80% of buyer inquiries", 10+ LLMs, 50+ prompt iterations, planned A/B tests, PRDs. Add only if sourced.

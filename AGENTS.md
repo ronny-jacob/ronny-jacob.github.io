@@ -16,7 +16,7 @@ CI (`.github/workflows/deploy.yml`) runs build then check on every push and pull
 ## Layout
 - `pages/*.html`: the source. Each starts with `<!--title: ...-->`, `<!--desc: ...-->` and optionally `<!--image: ...-->`. `{{root}}` becomes the relative path to the site root. `{{include:name}}` inlines `pages/_name.html`.
 - `tools/build.py`: wraps fragments in the shared header and footer. `tools/check.py`: the quality gate.
-- `assets/css/style.css`: all styles (tokens at the top). `assets/js/main.js`: the hero demo and the "Try it live" gating. `assets/img/`: portrait and placeholder images.
+- `assets/css/style.css`: all styles (tokens at the top). `assets/js/main.js`: scroll reveal, chart count-up, the keyword demo and the "Try it live" gating. `assets/img/`: portrait and placeholder images.
 - `CLAIMS.md`: every number or factual claim on the site with its source and status.
 
 ## Rules you must not break
@@ -27,9 +27,11 @@ CI (`.github/workflows/deploy.yml`) runs build then check on every push and pull
 5. **Medical.** Invisalign Tracker is a tracking tool, not medical advice. Make no treatment-efficacy claims.
 6. **Honesty about the owner.** He is an MBA candidate with internship experience and self-built products, not a senior leader.
 7. **Do not add** testimonials, a skills word cloud, decorative charts without real data, animated backgrounds, or new pages without approval.
+8. **Motion must carry meaning.** Scroll reveals, bars growing from zero and count-ups to the real figure are fine. Count-ups must end on the exact figure in `CLAIMS.md`. All motion uses transform/opacity and is disabled under `prefers-reduced-motion`.
+9. **Copy may be rewritten freely (owner approved)**, but only wording, never facts: a rewrite must not add a claim that is not in `CLAIMS.md`.
 
 ## Design rules (details in `docs/DESIGN.md`)
-One accent colour, one corner radius, one type scale. Charts start at zero and use direct labels. Keep every group to three items or fewer. Contrast at least 4.5:1 for text and 3:1 for graphics; tap targets at least 44px for primary controls. Respect `prefers-reduced-motion`. No horizontal scroll at 390px.
+One accent colour, one corner radius (`--r`, 14px), one type scale. Charts start at zero and use direct labels. Keep every group to three items or fewer. Contrast at least 4.5:1 for text and 3:1 for graphics; tap targets at least 44px for primary controls. Respect `prefers-reduced-motion`. No horizontal scroll at 390px.
 
 ## Definition of done
 - `python3 tools/build.py && python3 tools/check.py` passes.

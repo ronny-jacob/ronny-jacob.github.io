@@ -15,7 +15,7 @@ Every number or factual claim on the site, with its source and status. "Confirm"
 | 9 | "Tens of thousands of inquiries a day" | Report (15,000–30,000 in different places) | Approximate on purpose |
 | 10 | SpaCy approach and first Gemma 2 prompt built by the tech team; engineering deployed | Report; your message | Verified |
 | 11 | Pipeline: skip model for 1–2 word inputs; retry up to 5 times on one-word output; fall back to original | Report | Verified in report |
-| 12 | 56 different students in the first 99 sign-in entries, 13–14 July 2026 | Analytics sheet (first 100 rows visible to me) | **Confirm** the full log size; the true total is probably higher |
+| 12 | 147 distinct students opened their timetable (owner: a name in the log means the timetable was accessed), 3 Aug to 13 Oct 2026; 123 (84%) logged on 10 or more different days; 137 in the 7 days before 13 Oct | Analytics sheet read in full on 13 Oct 2026 (about 32,000 rows). Counted `select` events with roll numbers starting H; ignored 2,807 blank rows and faculty or staff entries | Verified from the sheet. Counts students who opened a timetable, not devices (the sheet shows 660 distinct device IDs). The earlier figure (56 in the first 99 entries, 13-14 July) is replaced; the sheet now starts on 3 Aug |
 | 13 | Class Companion features | Ran your uploaded file | Verified |
 | 14 | Data arrives as Excel sheets by email and WhatsApp placement messages | Your message | Verified by you |
 | 15 | Invisalign Tracker: 75 of 75 tests pass | I ran `rules-tests.js` | Verified |
@@ -33,3 +33,22 @@ Every number or factual claim on the site, with its source and status. "Confirm"
 
 ## Lean 12 live copy
 The uploaded file has these defaults built in: start weight 75 kg, height 168 cm, goal 68 kg, 2,000 kcal, 140 g protein, 9,000 steps. If the live page is the same file, every visitor sees them in the Progress, Guide and Data tabs. Replace them with neutral defaults if you do not want them public.
+
+## Copy notes (design overhaul)
+- Home hero now says "A former advocate, now an MBA candidate (2027) at NMIMS Hyderabad and a product intern at TradeIndia". This restates claim 19 and the TradeIndia internship (claim 7 context); no new fact.
+- Section headings were reworded ("How I work", a contact heading). No claims changed.
+- The résumé button is intentionally absent until a PDF is provided.
+
+## SplitBill (added by owner statement, 13 Oct 2026)
+| # | Claim on the site | Source | Status |
+| --- | --- | --- | --- |
+| 21 | Built for the owner's group food orders; people eat different items and who pays varies | Owner message | Owner statement |
+| 22 | Scan uses an image model on Google Cloud because OCR methods did not work | Owner message | Owner statement; model not named on the site |
+| 23 | Reads the bills tried correctly | Owner message said "always"; the site says only "the bills I have tried", tagged Observed | Not measured. Do not strengthen without a test set |
+| 24 | A few people use it, hosted on Netlify | Owner message ("some people use it") | No count. Do not add a number without a source |
+| 25 | Features: scan or upload, manual entry, tap names to assign, shared items split equally, copy result | Page at ronsplitsbills.netlify.app, viewed 13 Oct 2026 | Verified on the page. Payer handling (one person paying all, or parts) was not seen, so it is not claimed |
+
+## Class Companion opens (owner clarification, 13 Oct 2026)
+| # | Claim on the site | Source | Status |
+| --- | --- | --- | --- |
+| 26 | 16,795 app opens in 72 days (3 Aug to 13 Oct), about 233 a day; 1,943 in the 7 days to 13 Oct | `pageview` events in the analytics sheet. Owner: a blank-identity open is someone arriving on the Food Menu, the landing page | Verified from the sheet. May include the owner's own visits (not separable). Opens are not people: many people use the Food Menu without picking their name, so the 147 students is a floor for personalised users, not total reach |

@@ -6,7 +6,7 @@ Match each kind of information to the form that shows it fastest. Proof over cla
 ## Tokens (`assets/css/style.css`, `:root`)
 - Colour: `--paper #f5f5f1`, `--surface #fff`, `--ink #14181b`, `--muted #586168`, `--line #d8d9d3`, accent `--teal #16505f`, `--amber #8f4a0c` (removed items and "Observed" tags). A dark theme is defined through `prefers-color-scheme`.
 - Type: headings and UI in Schibsted Grotesk, body in Newsreader (Google Fonts, with Georgia and system fallbacks). Body 18px / 1.65, line length about 40rem.
-- Radius: one value, `--r: 8px` (screenshots and the live phone frame are the only exceptions). Spacing steps `--s1` to `--s5`.
+- Radius: one value, `--r: 14px` (screenshots and the live phone frame are the only exceptions). Spacing steps `--s1` to `--s5`.
 
 ## Components
 - **Hero:** outcome headline, one line about him, one primary button.
@@ -22,3 +22,6 @@ Skip link, visible focus ring, reduced-motion support, alt text (empty alt only 
 
 ## Charts and data honesty
 Never plot data that is not in `CLAIMS.md`. Do not chart per-model accuracy for the other four models (the source report gives conflicting ranges).
+
+## Motion
+Scroll reveal (fade up), bars growing from a zero baseline and count-ups that end on the real figure. Easing `--ease: cubic-bezier(.32,.72,0,1)`. Hero has one static soft gradient, no animated background. Everything is off under `prefers-reduced-motion`.
