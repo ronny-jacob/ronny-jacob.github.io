@@ -15,7 +15,7 @@ Every number or factual claim on the site, with its source and status. "Confirm"
 | 9 | "Tens of thousands of inquiries a day" | Report (15,000–30,000 in different places) | Approximate on purpose |
 | 10 | SpaCy approach and first Gemma 2 prompt built by the tech team; engineering deployed | Report; your message | Verified |
 | 11 | Pipeline: skip model for 1–2 word inputs; retry up to 5 times on one-word output; fall back to original | Report | Verified in report |
-| 12 | 56 different students in the first 99 sign-in entries, 13–14 July 2026 | Analytics sheet (first 100 rows visible to me) | **Confirm** the full log size; the true total is probably higher |
+| 12 | 147 distinct student roll numbers in the usage log, 3 Aug to 13 Oct 2026; 123 (84%) logged on 10 or more different days; 137 in the 7 days before 13 Oct | Analytics sheet read in full on 13 Oct 2026 (about 32,000 rows). Counted `select` events with roll numbers starting H; ignored 2,807 blank rows and faculty or staff entries | Verified from the sheet. Counts students, not devices (the sheet shows 660 distinct device IDs). The earlier figure (56 in the first 99 entries, 13-14 July) is replaced; the sheet now starts on 3 Aug |
 | 13 | Class Companion features | Ran your uploaded file | Verified |
 | 14 | Data arrives as Excel sheets by email and WhatsApp placement messages | Your message | Verified by you |
 | 15 | Invisalign Tracker: 75 of 75 tests pass | I ran `rules-tests.js` | Verified |
