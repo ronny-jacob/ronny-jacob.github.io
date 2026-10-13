@@ -408,3 +408,10 @@ html { scroll-padding-top:6rem; }
 
 /* Four project cards: 2x2 on desktop */
 @media (min-width:821px) { .trio.small { grid-template-columns:repeat(2,1fr); } .trio.small .live { height:300px; } }
+
+/* Photo on the left: he looks right, toward the headline */
+@media (min-width:821px) {
+  .hero-grid { grid-template-columns:.62fr 1.38fr; }
+  .hero-photo { order:-1; transform:rotate(-1.2deg); }
+  .proof-chip { left:auto; right:-2.4rem; transform:rotate(2deg); }
+}
