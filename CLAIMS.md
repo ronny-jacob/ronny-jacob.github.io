@@ -33,3 +33,8 @@ Every number or factual claim on the site, with its source and status. "Confirm"
 
 ## Lean 12 live copy
 The uploaded file has these defaults built in: start weight 75 kg, height 168 cm, goal 68 kg, 2,000 kcal, 140 g protein, 9,000 steps. If the live page is the same file, every visitor sees them in the Progress, Guide and Data tabs. Replace them with neutral defaults if you do not want them public.
+
+## Copy notes (design overhaul)
+- Home hero now says "A former advocate, now an MBA candidate (2027) at NMIMS Hyderabad and a product intern at TradeIndia". This restates claim 19 and the TradeIndia internship (claim 7 context); no new fact.
+- Section headings were reworded ("How I work", a contact heading). No claims changed.
+- The résumé button is intentionally absent until a PDF is provided.
