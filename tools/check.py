@@ -50,6 +50,7 @@ def main():
         for ref in p.refs:
             if re.match(r"(https?:|mailto:|tel:|//|data:)", ref) or ref.startswith("{{"): continue
             path, _, frag = ref.partition("#")
+            path = path.partition("?")[0]  # ignore cache-busting query strings
             target = (base / path) if path else (ROOT / rel)
             if path.startswith("/"): target = ROOT / path.lstrip("/")
             if path and not target.exists(): errors.append(f"{rel}: broken reference {ref}"); continue

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Wraps the HTML fragments in pages/ with the shared header/footer and writes the site.
 Usage: python3 tools/build.py   (run from the site root). Output goes next to pages/."""
-import re, pathlib
+import re, pathlib, hashlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = "https://ronny-jacob.github.io/"
@@ -15,6 +15,10 @@ PAGES = {  # fragment -> output path
     "404.html": "404.html",
 }
 NAV = [("Work", "#work", "work"), ("Skills", "#skills", "skills"), ("About", "#about", "about"), ("Contact", "#contact", "contact")]
+
+def ver(rel):
+    """Short content hash so browsers refetch CSS/JS whenever they change."""
+    return hashlib.sha1((ROOT / rel).read_bytes()).hexdigest()[:8]
 
 def meta(src, key):
     m = re.search(r"<!--\s*%s:\s*(.*?)\s*-->" % key, src, re.S)
@@ -55,7 +59,7 @@ def build():
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Schibsted+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="{root}assets/css/style.css">
+<link rel="stylesheet" href="{root}assets/css/style.css?v={ver("assets/css/style.css")}">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -69,7 +73,7 @@ def build():
 <footer class="site-footer"><div class="wrap">
 <span>Ronny Jacob</span>
 </div></footer>
-<script src="{root}assets/js/main.js" defer></script>
+<script src="{root}assets/js/main.js?v={ver("assets/js/main.js")}" defer></script>
 </body>
 </html>
 """
