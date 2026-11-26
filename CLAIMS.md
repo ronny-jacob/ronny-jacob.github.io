@@ -71,7 +71,7 @@ Impact numbers on the resume (about +150K matches a day, 2x seller reach) are la
 ## Resume additions (26 Nov 2026, source: Ronny_Mammen_Jacob_Resume.pdf and RonnyJacob_NMIMSHyderabad.pdf)
 | # | Claim on the site | Status |
 | --- | --- | --- |
-| 32 | Founder's Office Intern at Mellone since Sep 2026: built the Wingman website end to end with Claude under senior review; 700-lead CRM funnel and 14-day cadence in pilot testing; human-in-the-loop AI drafting of email and WhatsApp; ICP and 5 priority industries; 90-day SEO, AEO and GEO roadmap for a client | Resume. Launch date (Dec 2026), the 5 to 8% reply-rate target and the estimated ~80% effort cut are left out on purpose |
+| 32 | Founder's Office Intern at Mellone since Sep 2026: built the website for Mellone's AI consulting arm end to end with Claude under senior review (the arm's name is deliberately not published); 700-lead CRM funnel and 14-day cadence in pilot testing; human-in-the-loop AI drafting of email and WhatsApp; ICP and 5 priority industries; 90-day SEO, AEO and GEO roadmap for a client | Resume. Launch date (Dec 2026), the 5 to 8% reply-rate target and the estimated ~80% effort cut are left out on purpose |
 | 33 | 98% of my batch: 147 of 150 students opened their timetable | Resume (batch size 150). Student count verified in the analytics sheet (claim 12) |
 | 34 | Attendance tracking added at students' request | Resume |
 | 35 | CAT 2024 98.36 percentile (verbal), XAT 2025 98.39 percentile (decision making) | Resume. CGPA, school grades and NMAT left off the site |
