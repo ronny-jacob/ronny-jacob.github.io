@@ -57,3 +57,26 @@ The uploaded file has these defaults built in: start weight 75 kg, height 168 cm
 | # | Claim on the site | Source | Status |
 | --- | --- | --- | --- |
 | 27 | For long-tail keywords, a buyer request (RFI) now reaches 6x more correct sellers in production | Owner: read from the company dashboard (before 5 correct sellers, now 30); exact counts withheld at the owner's request, only the multiplier is shown | Owner statement of a dashboard figure. Not independently seen by the site author. Applies to long-tail keywords only. Not an accuracy metric: keep it separate from the 43% to 86% offline result |
+
+## Resume reconciliation (26 Nov 2026)
+Owner instruction: where the site and the resumes differ, use the resumes (Ronny_Mammen_Jacob_Resume.pdf and RonnyJacob_NMIMSHyderabad.pdf). Changes:
+| # | Was on the site | Now (resume wording) | Note |
+| --- | --- | --- | --- |
+| 28 | Product intern, TradeIndia | Product trainee, AI Product Management (B2B Seller Discovery), Apr to Jun 2026 | Title only |
+| 29 | 43% to 86% was an offline test on a 10,000-product set, "not a production metric", expect production lower | Tested on 10,000 real buyer inquiries; live accuracy matched the test results | Reverses an earlier caveat. Owner should be able to say how live accuracy was checked. 76%, 88%, 97% remain test-only |
+| 30 | Tens of thousands of inquiries a day | About 15,000 buyer inquiries a day | Resume figure |
+| 31 | Engineering deployed it | Owned end to end with 3 engineers including the VP Engineering; caching and rate-limiting controls added | Resume wording |
+Impact numbers on the resume (about +150K matches a day, 2x seller reach) are labelled estimates there and are not on the site yet. The site keeps the dashboard-measured 6x for long-tail requests (claim 27).
+
+## Resume additions (26 Nov 2026, source: Ronny_Mammen_Jacob_Resume.pdf and RonnyJacob_NMIMSHyderabad.pdf)
+| # | Claim on the site | Status |
+| --- | --- | --- |
+| 32 | Founder's Office Intern at Mellone since Sep 2026: built the website for Mellone's AI consulting arm end to end with Claude under senior review (the arm's name is deliberately not published); 700-lead CRM funnel and 14-day cadence in pilot testing; human-in-the-loop AI drafting of email and WhatsApp; ICP and 5 priority industries; 90-day SEO, AEO and GEO roadmap for a client | Resume. Launch date (Dec 2026), the 5 to 8% reply-rate target and the estimated ~80% effort cut are left out on purpose |
+| 33 | 98% of my batch: 147 of 150 students opened their timetable | Resume (batch size 150). Student count verified in the analytics sheet (claim 12) |
+| 34 | Attendance tracking added at students' request | Resume |
+| 35 | CAT 2024 98.36 percentile (verbal), XAT 2025 98.39 percentile (decision making) | Resume. CGPA, school grades and NMAT left off the site |
+| 36 | TradeIndia matching had been done by a ~30-person manual team | Resume |
+| 37 | Estimated: ~15,000 inquiries a day reach 2x more sellers, adding ~150K matches a day | Resume labels it an estimate; the site does too. Separate from the dashboard-measured 6x for long-tail requests (claim 27) |
+| 38 | Volunteer for India chapter lead (2022), HRizon SPOC (2026), PlaceCom (2025), top 30 of 400 research selection (2022), Lean Six Sigma Green Belt KPMG (2025) | Resume |
+| 39 | Four live apps built with AI tools | Resume; the four apps are on the site |
+Never published: phone number, SAP ID (see AGENTS.md rule 4).
