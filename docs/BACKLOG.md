@@ -1,7 +1,7 @@
 # Backlog
 
 ## Blocked on the owner (do not guess; ask)
-1. Confirm the 43% → 86% claim: that 43% is the SpaCy approach, that it was measured on 10,000 products, and how "correct" was judged. (The source report says 100 products in most places.)
+1. ~~Confirm the 43% to 86% claim~~ Resolved 26 Nov 2026 from the resume: 10,000 real inquiries, live accuracy matched. See CLAIMS.md #29.
 2. Confirm the chain 76% → 88% for Gemma 2 and that 86% is the prompt alone while 88% adds the validation pipeline.
 3. ~~Full NMIMS sign-in count~~ Resolved 13 Oct 2026: 147 students, see CLAIMS.md #12.
 4. Whether the email ronnyjacobmba@gmail.com is public.

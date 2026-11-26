@@ -57,3 +57,13 @@ The uploaded file has these defaults built in: start weight 75 kg, height 168 cm
 | # | Claim on the site | Source | Status |
 | --- | --- | --- | --- |
 | 27 | For long-tail keywords, a buyer request (RFI) now reaches 6x more correct sellers in production | Owner: read from the company dashboard (before 5 correct sellers, now 30); exact counts withheld at the owner's request, only the multiplier is shown | Owner statement of a dashboard figure. Not independently seen by the site author. Applies to long-tail keywords only. Not an accuracy metric: keep it separate from the 43% to 86% offline result |
+
+## Resume reconciliation (26 Nov 2026)
+Owner instruction: where the site and the resumes differ, use the resumes (Ronny_Mammen_Jacob_Resume.pdf and RonnyJacob_NMIMSHyderabad.pdf). Changes:
+| # | Was on the site | Now (resume wording) | Note |
+| --- | --- | --- | --- |
+| 28 | Product intern, TradeIndia | Product trainee, AI Product Management (B2B Seller Discovery), Apr to Jun 2026 | Title only |
+| 29 | 43% to 86% was an offline test on a 10,000-product set, "not a production metric", expect production lower | Tested on 10,000 real buyer inquiries; live accuracy matched the test results | Reverses an earlier caveat. Owner should be able to say how live accuracy was checked. 76%, 88%, 97% remain test-only |
+| 30 | Tens of thousands of inquiries a day | About 15,000 buyer inquiries a day | Resume figure |
+| 31 | Engineering deployed it | Owned end to end with 3 engineers including the VP Engineering; caching and rate-limiting controls added | Resume wording |
+Impact numbers on the resume (about +150K matches a day, 2x seller reach) are labelled estimates there and are not on the site yet. The site keeps the dashboard-measured 6x for long-tail requests (claim 27).

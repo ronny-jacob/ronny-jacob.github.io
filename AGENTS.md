@@ -21,7 +21,7 @@ CI (`.github/workflows/deploy.yml`) runs build then check on every push and pull
 
 ## Rules you must not break
 1. **No invented facts.** Every number, outcome, date or role on the site must be in `CLAIMS.md` with a source. If it is not there and the owner has not confirmed it, do not add it. Never invent usage, revenue, conversions, testimonials, user research, ownership or production metrics.
-2. **Keep measured and observed separate.** Offline test results are never described as production results. Keep the `Measured` / `Observed` tags and the "what I did not measure" statements.
+2. **Keep measured and observed separate.** Call a result live or production only where the owner's resume or `CLAIMS.md` says so (43% to 86% matched live per the resume; the 76%, 88% and Gemini figures stay test-only). Keep the `Measured` / `Observed` tags and the "what I did not measure" statements.
 3. **Gemini 2.5 Flash Lite (97%) was not deployed.** Never imply it was. The deployed model was Gemma 2.
 4. **Confidentiality.** Never publish prompts, internal scoring logic or statistics, colleague names, the student ID, or Lean 12 body targets. `tools/check.py` blocks a list of forbidden terms; extend it, never weaken it.
 5. **Medical.** Invisalign Tracker is a tracking tool, not medical advice. Make no treatment-efficacy claims.

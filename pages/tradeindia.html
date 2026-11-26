@@ -3,23 +3,23 @@
 <header class="cs-head wrap">
   <p class="crumb"><a href="{{root}}index.html#work">All work</a></p>
   <h1>TradeIndia: AI keyword matching</h1>
-  <p class="sub">Product intern, April–June 2026.</p>
+  <p class="sub">Product trainee, April–June 2026.</p>
   <dl class="brief">
     <dt>Problem</dt><dd>Buyers type long product names. Sellers list short ones. Matching used the full name, so qualified sellers were missed.</dd>
-    <dt>I owned</dt><dd>Model comparison, 14 prompt experiments, a validation pipeline and automated testing.</dd>
-    <dt>Result</dt><dd class="result">43% → 86% accuracy on a 10,000-product offline test. Deployed during the internship, where a long-tail buyer request now reaches 6x more correct sellers, from the company dashboard.</dd>
+    <dt>I owned</dt><dd>The initiative end to end with 3 engineers, including the VP Engineering: model comparison, 14 prompt experiments, a validation pipeline, automated testing, and caching and rate-limiting controls.</dd>
+    <dt>Result</dt><dd class="result">43% → 86% accuracy on 10,000 real buyer inquiries, and live accuracy matched the test results. Shipped to production, where a long-tail buyer request now reaches 6x more correct sellers, from the company dashboard.</dd>
     <dt>Next</dt><dd>Test Gemini 2.5 Flash Lite in production once budget allows.</dd>
   </dl>
 </header>
 
 <div class="cs-body wrap">
 <div class="top-chart">{{include:chart}}
-<p class="legend"><span class="tag tag-m">Measured</span> a test I ran. <span class="tag tag-o">Observed</span> something I saw without a metric. The 6x figure for long-tail buyer requests comes from the company dashboard, not a test I ran. I did not measure production accuracy or business impact myself. Prompts and some details are withheld under a confidentiality agreement.</p></div>
+<p class="legend"><span class="tag tag-m">Measured</span> a test I ran. <span class="tag tag-o">Observed</span> something I saw without a metric. The 6x figure for long-tail buyer requests comes from the company dashboard, not a test I ran. Impact figures such as seller reach are estimates. Prompts and some details are withheld under a confidentiality agreement.</p></div>
 
 <div class="lanes" role="group" aria-label="Who did what">
   <div class="lane"><h3>Tech team</h3><p>SpaCy model (43%) and the first Gemma 2 prompt (76%)</p></div>
   <div class="lane mine"><h3>Me</h3><p>New prompt (86%), validation pipeline (88%) and automated testing</p></div>
-  <div class="lane"><h3>Engineering</h3><p>Deployed it to production</p></div>
+  <div class="lane"><h3>Engineering</h3><p>3 engineers, including the VP Engineering, shipped it to production with me</p></div>
 </div>
 
 <h2>The problem</h2>
@@ -29,11 +29,11 @@
   <p class="out" aria-hidden="true">Steel Bottle</p>
   <figcaption>Illustrative example. Specifications and marketing words never match a seller’s keywords.</figcaption>
 </figure>
-<p>The system used the full product name as the search keyword, across tens of thousands of inquiries a day. I traced the journey from inquiry to seller notification and found the keyword step was the bottleneck. The first release also had to cost nothing to run and work with a 2-billion-parameter model.</p>
+<p>The system used the full product name as the search keyword, across about 15,000 buyer inquiries a day. I traced the journey from inquiry to seller notification and found the keyword step was the bottleneck. The first release also had to cost nothing to run and work with a 2-billion-parameter model.</p>
 
 <h2>What I did</h2>
 <ul>
-  <li><strong>Ruled out SpaCy:</strong> 43% on the 10,000-product test set. <span class="tag tag-m">Measured</span></li>
+  <li><strong>Ruled out SpaCy:</strong> 43% on the 10,000-inquiry test set. <span class="tag tag-m">Measured</span></li>
   <li><strong>Compared six models:</strong> GPT-4o, Claude 3.5 Sonnet, Mistral Large, DeepSeek V3, Gemini 2.5 Flash Lite and Gemma 2.</li>
   <li><strong>Tested 14 prompt variants</strong> with fixed settings. Clear steps beat example-heavy prompts, and extra rules caused errors, so I moved edge cases into code. Best prompt: 86%. <span class="tag tag-m">Measured</span></li>
   <li><strong>Added a validation pipeline:</strong> Gemma 2 went from 76% (original prompt) to 88%. <span class="tag tag-m">Measured</span></li>
@@ -60,10 +60,10 @@
 
 <h2>Limits and next steps</h2>
 <ul>
-  <li>These are offline test results. The original prompt scored higher in my controlled tests than in the team’s earlier production testing, so I expect production to land lower.</li>
+  <li>The 43% and 86% results come from a test on 10,000 real buyer inquiries, and live accuracy matched them. The 76% and 88% figures and the Gemini result are test results only.</li>
   <li>A 2B model has a ceiling. Retries and fallbacks stop bad output but cannot fix a plausible wrong keyword.</li>
   <li>Shorter keywords match more sellers and can match the wrong ones. I handled this with the pipeline, not a measured precision metric.</li>
-  <li>Next: run Gemini 2.5 Flash Lite on the same test set in production, find the test-to-live gap, and measure sellers reached per inquiry.</li>
+  <li>Next: run Gemini 2.5 Flash Lite on the same inquiries in production, and measure sellers reached per inquiry.</li>
 </ul>
 
 <div class="next-prev">
